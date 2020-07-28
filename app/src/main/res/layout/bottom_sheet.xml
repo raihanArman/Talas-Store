@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!--  <include
+          layout="@layout/layout_bottons_and_textviews"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv_makanan"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:src="@drawable/bg_horizontal"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:id="@+id/tv_makanan"
+                android:textSize="25sp"
+                android:text="Menu"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_harga"
+                android:textSize="20sp"
+                android:text="Menu"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:id="@+id/btn_quantity"
+                android:layout_marginTop="10dp"
+                app:textSize="8sp"
+                app:backGroundColor="@color/colorAccent"
+                app:initialNumber="1"
+                app:finalNumber="20"></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_pesan"
+        android:background="@color/colorRose"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/white"
+        android:text="Pesan"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>

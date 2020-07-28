@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:layout_margin="20dp"/>
+        <TextView
+            android:id="@+id/tv_nama_kategori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Makanan"
+            android:textSize="25dp"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </LinearLayout>
+    <EditText
+        android:id="@+id/et_cari"
+        android:layout_below="@id/lv_1"
+        android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_input"
+        android:drawableRight="@drawable/ic_search_black_24dp"
+        android:drawableTint="@color/colorAccent"
+        android:ems="10"
+        android:hint="Cari"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="12sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_kategori_makanan"
+        android:layout_below="@id/et_cari"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/lv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/et_cari"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/gambar"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/ic_empty"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_below="@id/gambar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data kosong"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

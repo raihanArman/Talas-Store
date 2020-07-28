@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_setting"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/button_white"
+                android:tint="@android:color/white"
+                android:backgroundTint="#95868686"
+                android:padding="3dp"
+                android:elevation="10dp"
+                android:src="@drawable/ic_settings_black_24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/bg_horizontal"
+                android:elevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:elevation="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Asrul Sani"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_user" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="asrulsani@gmail.com"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_user"
+                app:layout_constraintStart_toStartOf="@+id/tv_user"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user" />
+
+            <Button
+                android:id="@+id/btn_log_out"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_white"
+                android:backgroundTint="#FF3B42"
+                android:elevation="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Log Out"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:background="@drawable/layout_kas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:text="Riwayat pembayaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/poppins_regular"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_pembayaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_pembayaran"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
